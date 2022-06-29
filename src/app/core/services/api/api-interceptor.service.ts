@@ -29,7 +29,7 @@ export class ApiInterceptorService implements HttpInterceptor {
         if (jwt === null) {
           return next.handle(request);
         } else {
-          request = this.addJwtHeader(request, jwt);
+          request = this.addTokenHeader(request, jwt);
           return next.handle(request);
         }
       }),
@@ -47,17 +47,7 @@ export class ApiInterceptorService implements HttpInterceptor {
     }
   }
 
-  private addJwtHeader(request: HttpRequest<any>, token: string) {
-    return request.clone({ headers: request.headers.set('jwt', token) });
-  }
-
-  /**
-   * HttpRequest.header 에 토큰추가
-   * @param request
-   * @param token
-   * @returns
-   */
   private addTokenHeader(request: HttpRequest<any>, token: string) {
-    return request.clone({ headers: request.headers.set('Authorization', 'Bearer ' + token) });
+    return request.clone({ headers: request.headers.set('authorization', 'Bearer ' + token) });
   }
 }
