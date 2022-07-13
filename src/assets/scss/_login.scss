@@ -1,0 +1,382 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: #f7f7f7;
+  margin: 0 5px;
+  display: flex;
+  overflow-x: scroll;
+}
+
+main {
+  width: 83%;
+  height: 100vh;
+  background-color: #f3f3f3;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.121);
+  margin: 0 auto;
+  display: flex;
+}
+
+/* index1-login ----------------------- */
+
+.login {
+  align-self: center;
+  background-color: #ffffff;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.121);
+  width: 60%;
+  max-width: 500px;
+  min-width: 300px;
+  height: 35%;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 1.3em;
+  align-items: center;
+}
+
+.login_layout {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+
+.login_logo {
+  max-width: 30%;
+  height: auto;
+  justify-self: flex-start;
+  margin-bottom: 15px;
+}
+
+.login_input {
+  border: none;
+  border-bottom: 2px solid #f7f7f7;
+  padding-bottom: 10px;
+  margin-right: 40px;
+}
+.login_input::placeholder {
+  color: #c3c3c3;
+  font-size: 15px;
+}
+.login_input:focus {
+  outline: none;
+}
+
+/* 기존 체크박스 숨기기 */
+input[id="cb1"] {
+	display: none;
+}
+/* 라벨 꾸미기 */
+input[id="cb1"] + label {
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	border: 1.5px solid #c3c3c3;
+	cursor: pointer;
+}
+input[id="cb1"] + label + span {
+  color: #c3c3c3;
+  font-size: 13px;
+  position: relative;
+  top: -5px;
+  padding-left: 5px;
+}
+/* 라벨 클릭시 */
+input[id="cb1"]:checked + label::after {
+  content:'✔';
+  font-size: 13px;
+  color: #0b6277;
+  width: 13px;
+  height: 13px;
+  text-align: center;
+  left: 1px;
+  top: -5px;
+  position: relative;
+}
+
+.login_btn {
+  background-color: #0b6277;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 0px;
+  margin-right: 40px;
+  cursor:pointer;
+}
+
+/* index2-main ----------------------- */
+
+.main {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.main_layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.main_logo {
+  align-self: flex-start;
+  justify-items: flex-start;
+  position: absolute;
+  display: inline-block;
+}
+.main_logo img {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: inline;
+  float: left;
+  padding: 10px;
+}
+
+.main_layout_line {
+  width: 1px;
+  height: 15vh;
+  background-color: rgb(155, 154, 154);
+}
+.main_layout_light {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(#fc8799, rgba(255,0,0,0), #ffffff);
+  border-radius: 50%;
+}
+.main_layout_window_top {
+  width: 300px;
+  height: 300px;
+  background-color: #fdf9e1;
+  border-radius: 50% 50% 0 0;
+}
+.main_layout_window_top h2 {
+  padding: 10px;
+  padding-top: 45px;
+  font-size: 35px;
+  line-height: 170%;
+  text-align: center;
+  letter-spacing: 1.3px;
+  color: rgb(43, 43, 43);
+}
+.main_layout_window_bottom {
+  width: 300px;
+  height: 200px;
+  background-color: #fdf9e1;
+}
+.main_layout_window_bottom h5 {
+  /* padding: 10px; */
+  /* padding-top: 15px; */
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  text-align: center;
+  color: #848383;
+  letter-spacing: 1.4px;
+}
+
+.inner {
+  position: fixed;
+  bottom: 3%;
+  width: 300px;
+  height: 200px;
+  filter: sepia(60%);
+  /* background-color: red; */
+  border-radius: 50%;
+}
+
+.main_layout_sofa {
+  // background-image: url("./assets/2204_w037_n003_339a_p1_339.jpg");
+  background-size: contain;
+}
+
+.luminosity {
+  /* mix-blend-mode: luminosity; */
+}
+
+/* .main_layout_sofa {
+  width: 500px;
+  position: fixed;
+  top: 70%;
+  z-index: 2;
+  filter: sepia(60%);
+} */
+
+.main_layout_floor {
+  width: 350px;
+  height: 100px;
+  /* border-bottom: 100px solid pink; */
+  /* border-bottom: 100px solid pink; */
+  /* border-left: 25px solid transparent;
+  border-right: 25px solid transparent; */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(#fc8799, #ffbaba 30%, rgba(255,0,0,0));
+  transform: perspective(10px) rotateX(2deg);
+  position: relative;
+  top: -10px;
+  z-index: 3;
+
+}
+
+.floor_button {
+  width: 250px;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 400;
+  background-color: #0b6277;
+  color: #ffffff;
+  margin: 0 auto;
+  padding: 5px 10px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  position: fixed;
+  bottom: 25px;
+  z-index: 4;
+  transform: perspective(0px) rotateY(0deg);
+}
+
+.floor_button_arrow {
+  transform: rotate(90deg);
+  /* filter : color to white */
+  filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%);
+  width: 15px;
+  margin-left: 10px;
+}
+
+/* index3-checkbox ----------------------- */
+
+.checkbox_layout {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* height: 100%; */
+  height: 100%;
+  width: 100%;
+}
+
+.checkbox_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  /* border: 2px solid red; */
+  width: 83%;
+  position: fixed;
+}
+
+.checkbox_logo {
+  /* align-self: flex-start; */
+  /* justify-items: flex-start; */
+  /* justify-content: space-around; */
+  /* position: relative; */
+  /* display: inline-block; */
+  /* border: 2px solid yellow; */
+  width: 100%;
+  background-color: #ffffff;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox_logo img {
+  /* justify-items: flex-start; */
+  /* position: relative; */
+  width: 30px;
+  height: 30px;
+  /* float: left; */
+  padding: 10px;
+  display: inline-block;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  position: absolute;
+
+}
+.checkbox_logo div {
+  /* justify-content: center; */
+  font-size: 20px;
+  font-weight: 600;
+  /* color: pink; */
+
+  /* display: inline-block; */
+  /* justify-self: center; */
+  /* align-self: center; */
+  /* text-align: center; */
+}
+.checkbox_ad {
+  width: 100%;
+  background-color: #c3c3c3;
+  text-align: center;
+  height: 150px;
+  /* position: fixed; */
+  /* display: inline-block */
+  ;
+}
+
+.empty {
+  height: 200px;
+  background-color: none;
+}
+
+.checkbox_article {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
+}
+.checkbox_article div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.checkbox_article input {
+  padding: 5px;
+  margin: 0 10px;
+}
+.checkbox_article span {
+  font-size: 15px;
+  font-weight: 300;
+  color:#595959;
+}
+.page {
+  justify-self: center;
+  align-self: center;
+  position: fixed;
+  bottom: 55px;
+  padding-bottom: 10px;
+}
+
+
+.checkbox_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 83%;
+  position: fixed;
+  bottom: 0px;
+
+}
+.checkbox_footer button {
+  border: none;
+  background-color: none;
+  background: linear-gradient(to right,#0b6277, #72b6c6 30%, rgba(255,0,0,0));
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 2px;
+}

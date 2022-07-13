@@ -9,6 +9,7 @@ import { StorageService } from 'src/app/core/services/storage/storage.service';
 import { ILoginRq } from '../models';
 
 @Injectable({ providedIn: 'root' })
+
 export class AuthService {
   // * 로그인 API 호출주소
   loginApiUrl: string = 'https://t-api.landmaster.co.kr/api/login';

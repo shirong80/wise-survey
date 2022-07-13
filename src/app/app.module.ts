@@ -11,6 +11,9 @@ import { ApiInterceptorService } from 'src/app/core/services/api/api-interceptor
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// custom module
+import { LoginModule } from './auth/login/login.module';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -19,6 +22,8 @@ import { AppComponent } from './app.component';
     CommonModule,
     HttpClientModule,
     AppRoutingModule,
+
+    LoginModule,
   ],
   providers: [
     {

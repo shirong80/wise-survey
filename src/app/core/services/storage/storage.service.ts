@@ -20,7 +20,9 @@ export const LOCAL_STORAGE_TOKEN = new InjectionToken('local-storage', {
 });
 
 @Injectable({ providedIn: 'root' })
+
 export class StorageService {
+
   supported(): Observable<boolean> {
     return this.storage !== null ? of(true) : throwError(() => 'Local Storage Not Supported');
   }
