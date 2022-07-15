@@ -12,7 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // custom module
-import { LoginModule } from './auth/login/login.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,8 +22,8 @@ import { LoginModule } from './auth/login/login.module';
     CommonModule,
     HttpClientModule,
     AppRoutingModule,
-
-    LoginModule,
+    AuthModule
+    // LoginModule,
   ],
   providers: [
     {

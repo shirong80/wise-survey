@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'login',
-    loadChildren: () => import('src/app/auth/login/login.module').then((m) => m.LoginModule),
+    loadChildren: () => import('src/app/auth/auth.module').then((m) => m.AuthModule),
     data: { title: '로그인페이지' },
   },
 ];
