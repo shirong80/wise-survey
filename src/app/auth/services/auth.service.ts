@@ -25,6 +25,7 @@ export class AuthService {
    * @param params 파라미터는 ILoginRq 인터페이스를 구현할것
    */
   login(params: ILoginRq) {
+    console.log(params, '파라미터_RQ');
     return this.apiService.post(this.loginApiUrl, params).pipe(
       map((user: any) => {
         if (user && user.token) {
@@ -33,10 +34,16 @@ export class AuthService {
           console.log(user, '유저');
           return user;
       }));
+
+    // return this.apiService.post(this.loginApiUrl, {
+    //   params.mb_email,
+    //   params.mb_password
+    // });
   }
 
   constructor(private apiService: ApiRequestService, private storageService: StorageService) {
 
+    this.login({mb_email: 'jdjdj', mb_password: 'ddd'});
 
 
     // apiService.post(this.loginApiUrl)
@@ -44,4 +51,6 @@ export class AuthService {
     //! setItem으로 로컬스토리지에 저장 - key, value
     // storageService.setItem()
   }
+
+
 }

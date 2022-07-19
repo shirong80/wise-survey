@@ -2,7 +2,8 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 // import * as _ from 'lodash';
 // services
-// import { AuthDataService } from '../../services';
+import { AuthService } from '../../services/auth.service';
+import { ILoginRq } from '../../models';
 
 @Component({
   selector: 'app-auth-form',
@@ -16,9 +17,14 @@ export class AuthFormComponent implements OnInit {
   // // state
   // private checkValid: boolean;
 
-  // constructor(private readonly dataService: AuthDataService) {
-  //   this.form = this.dataService.generateSignInForm();
-  // }
+  model :ILoginRq = {mb_email:'aa', mb_password:'bb'};
+
+  constructor(private readonly authService: AuthService) {
+
+  }
+
+
+
 
   ngOnInit() {}
 
